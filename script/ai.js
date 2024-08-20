@@ -23,7 +23,7 @@ module.exports.run = async function({ api, event, args }) {
   api.sendMessage('Please wait...', event.threadID, event.messageID);
 
   try {
-    const { data } = await axios.get(`https://nash-api-end.onrender.com/gpt3?prompt=${encodeURIComponent(input)}`);
+    const { data } = await axios.get(`https://api.kenliejugarap.com/freegpt4o8k/?prompt=${encodeURIComponent(input)}`);
     const response = data.result.reply;
 
     api.sendMessage(response, event.threadID, event.messageID);
