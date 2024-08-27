@@ -36,7 +36,7 @@ module.exports = {
     const fs = require("fs");
 
     try {
-      const response = await axios.get('https://shoti-api.libyzxy0.repl.co/api/get-shoti?apikey=shoti-1hc20nkqebs6diassn');
+      const response = await axios.get('http://linda.hidencloud.com:25636/shoti');
 
       if (response.data && response.data.code === 200 && response.data.data) {
         const videoURL = response.data.data.url;
