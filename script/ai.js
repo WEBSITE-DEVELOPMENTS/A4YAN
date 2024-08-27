@@ -22,9 +22,9 @@ module.exports.run = async function ({ api, event, args }) {
         }
 
         if (!prompt) {
-            return api.sendMessage('Please provide a prompt to generate a text response.\nExample: ai What is the meaning of life?', event.threadID, messageID);
+            return api.sendMessage('𝙿𝙻𝙴𝙰𝚂𝙴 𝙿𝚁𝙾𝚅𝙸𝙳𝙴 𝙰 𝙿𝚁𝙾𝙼𝙽𝚃 𝚃𝙾 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴 𝙰 𝚃𝙴𝚇𝚃 𝚁𝙴𝚂𝙿𝙾𝙽𝚂𝙴.\n𝙴𝚇𝙰𝙼𝙿𝙻𝙴: 𝙰𝙸 𝚆𝙷𝙰𝚃 𝙸𝚂 𝚃𝙷𝙴 𝙼𝙴𝙰𝙽𝙸𝙽𝙶 𝙾𝙵 𝙻𝙸𝙵𝙴?', event.threadID, messageID);
         }
-        api.sendMessage('🔍 Searching for an answer to your question...', event.threadID);
+        api.sendMessage('🔍 𝚂𝙴𝙰𝚁𝙲𝙷𝙸𝙽𝙶 𝙵𝙾𝚁 𝙰𝙽 𝙰𝙽𝚂𝚆𝙴𝚁 𝚃𝙾 𝚈𝙾𝚄𝚁 𝚀𝚄𝙴𝚂𝚃𝙸𝙾𝙽...', event.threadID);
 
         // Delay
         await new Promise(resolve => setTimeout(resolve, 2000)); // Adjust the delay time as needed
@@ -37,7 +37,7 @@ module.exports.run = async function ({ api, event, args }) {
             const generatedText = response.data.response;
 
             // Ai Answer Here
-            api.sendMessage(`🤖 Ai Answer\n━━━━━━━━━━━━━━━━\n\n𝗔𝗻𝘀𝘄𝗲𝗿: ${generatedText}\n\n━━━━━━━━━━━━━━━━`, event.threadID, messageID);
+            api.sendMessage(`➤🤖 𝙰𝙸 𝙰𝙽𝚂𝚆𝙴𝚁\n━━━━━━━━━━━━━━━━\n\n▀▄▀▄ 𝙾𝚆𝙽𝙴𝚁: 𝙼𝙰𝚁𝙺 𝙼𝙰𝚁𝚃𝙸𝙽𝙴𝚉▄▀▄▀\n\n𝗔𝗻𝘀𝘄𝗲𝗿: ${generatedText}\n\n━━━━━━━━━━━━━━━━`, event.threadID, messageID);
         } else {
             console.error('API response did not contain expected data:', response.data);
             api.sendMessage(`❌ An error occurred while generating the text response. Please try again later. Response data: ${JSON.stringify(response.data)}`, event.threadID, messageID);
