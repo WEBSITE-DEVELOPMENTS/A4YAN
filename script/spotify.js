@@ -77,7 +77,7 @@ module.exports = {
             const downloadUrl = selectedTrack.external_url;
             const downloadApiUrl = `https://spdl-v1.onrender.com/download?q=${encodeURIComponent(downloadUrl)}`;
 
-            // Send waiting message and react to it
+            // Send waiting message and react to it wow
             api.sendMessage("â³ | Downloading your song request. Please wait.....", event.threadID, (err, info) => {
                 if (err) return console.error(err);
 
