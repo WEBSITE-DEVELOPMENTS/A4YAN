@@ -23,7 +23,7 @@ function startAutoPost(api) {
             const response = await axios.get("https://catfact.ninja/fact");
             const catFact = response.data.fact;
 
-            const message = `𝚁𝙰𝙽𝙳𝙾𝙼 𝙲𝙰𝚃 𝙵𝙰𝙲𝚃: “${catFact}”`;
+            const message = ` 😻𝚁𝙰𝙽𝙳𝙾𝙼 𝙲𝙰𝚃 𝙵𝙰𝙲𝚃: “${catFact}”`;
 
             const formData = {
                 input: {
