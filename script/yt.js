@@ -16,7 +16,7 @@ module.exports.config = {
 
 module.exports.run = async function ({ api, event, args }) {
   if (!args[0]) {
-    return api.sendMessage(`❌ Please enter a video name!`, event.threadID);
+    return api.sendMessage(`🥲 Please enter a video name!`,event.threadID);
   }
 
   try {
