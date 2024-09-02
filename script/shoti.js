@@ -15,7 +15,7 @@ module.exports.run = async function({ api, event }) {
   const axios = require("axios");
   const request = require('request');
   const fs = require("fs"); 
-api.sendMessage(`⏱️ | Sending Shoti Please Wait...`, event.threadID, event.messageID);
+api.sendMessage(`⏱️ | Sending Shoti Please Wait....`, event.threadID, event.messageID);
   let data = await axios.get('http://linda.hidencloud.com:25636/shoti');
   var file = fs.createWriteStream(__dirname + "/cache/shoti.mp4");
   var rqs = request(encodeURI(data.data.data.url));
