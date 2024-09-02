@@ -75,15 +75,13 @@
 	  <p style=" margin-top: 10px">Greetings! Begin by entering your cookie.</p>
 	</div>
 	</div>
-	  <div id="result" class="container text-center" style="display: none;"></div>
-	<div class="footer">
-	  <div>
 	<label style="font-size: 14px; display: flex; align-items: center; padding: 22px;">
 	  <input type="checkbox" id="agreeCheckbox" style="color: #FFF; margin-right: 10px;"> Checking this box certifies that I have read, understood, and agreed to the Terms and Conditions. </label>
 	<div class="col text-center">
 	  <button class="btn btn-primary" onclick="State()" disabled id="submitButton" style="width: 100%">Submit</button>
 	</div>
-	    <div class="container" id="listOfCommands">
+	<div class="container">
+	  <div class="container" id="listOfCommands">
 		<h1 style="font-size: 16px; padding: 10px;">Please choose your commands by tapping on the respective options.</h1>
 		<button class="btn btn-primary" onclick="selectAllCommands()">Select all commands</button>
 	  </div>
@@ -98,11 +96,9 @@
 	  <div class="container" id="adminOfCommands">
 		<h1 style="font-size: 16px; padding: 10px;">Please provide an uid (optional). If you choose not to, entering 'default' will be considered as your input</h1>
 		<input type="text" id="inputOfAdmin">  
-	  </div>
-	  
-	<div class="container">
-	
-	
+	</div>
+	<div id="result" class="container text-center" style="display: none;"></div>
+	<div class="footer">
 	  <p>Time: <span id="time"></span>
 	  </p>
 	  <p>Ping: <span id="ping"></span>
